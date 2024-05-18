@@ -40,7 +40,7 @@ export const HomePage = () => {
       {journey && (
         <>
           <JourneyDetail journey={journey.stops} />
-          <SeatPicker seats={journey.seats}/>
+          <SeatPicker seats={journey.seats} selectedSeat={journey.autoSeat}/>
           <div className="controls container">
             <button onClick={handleBuy} className="btn btn--big" type="button">
               Rezervovat
