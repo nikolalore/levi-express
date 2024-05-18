@@ -1,8 +1,8 @@
 import './style.css';
 
-export const Seat = ({number}) => {
+export const Seat = ({number, isOccupied}) => {
   return (
-    <svg className="seat" viewBox="0 0 100 100" role="button">
+    <svg className={isOccupied ? "seat seat--occupied" : "seat"} viewBox="0 0 100 100" role="button">
       <rect
         className="seat__rect"
         width="80"

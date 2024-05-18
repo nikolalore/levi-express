@@ -7,6 +7,8 @@ import { SeatPicker } from '../../components/SeatPicker';
 export const HomePage = () => {
   const [journey, setJourney] = useState(null);
   const navigate = useNavigate();
+  console.log(journey)
+ 
 
   const handleJourneyChange = (journeyData) => {
     setJourney(journeyData);
@@ -38,7 +40,7 @@ export const HomePage = () => {
       {journey && (
         <>
           <JourneyDetail journey={journey.stops} />
-          <SeatPicker />
+          <SeatPicker seats={journey.seats}/>
           <div className="controls container">
             <button onClick={handleBuy} className="btn btn--big" type="button">
               Rezervovat
