@@ -87,7 +87,6 @@ export const JourneyPicker = ({ onJourneyChange }) => {
             <div className="journey-picker__label">Datum:</div>
             <select value={date} onChange={(e) => setDate(e.target.value)}>
               <DateOptions dates={dates} />
-              <DateOptions dates={dates} />
             </select>
           </label>
           <div className="journey-picker__controls">
